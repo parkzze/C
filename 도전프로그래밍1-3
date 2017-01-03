@@ -1,0 +1,36 @@
+//열혈C 도전프로그래밍1-3번문제
+#include <stdio.h>
+int gcd(int a, int b){
+	int mid;
+	if (a < b){
+		mid = b%a; //작은수를 큰수로 나눈 나머지
+		if (mid == 0)
+			return a;
+		else{
+			while (a%mid != 0){ //조건문에 식 들어가도된다***
+				mid = a%mid;
+			}
+			return mid;
+		}
+	}
+	else{
+		mid = a%b; //작은수를 큰수로 나눈 나머지
+		if (mid == 0)
+			return b;
+		else{
+			while (b%mid != 0){
+				mid = b%mid;
+			}
+			return mid;
+		}
+		return 0;
+	}
+}
+int main(){
+	int a, b;
+	printf("두 정수 입력:");
+	scanf("%d %d", &a, &b);
+	gcd(a, b);
+	printf("최대공약수=%d\n", gcd(a, b));
+	//여기는 꼭 return안써도 되더라
+}
