@@ -1,1 +1,27 @@
+//열혈C 도전프로그래밍1-5번문제
+#include <stdio.h>
+int main(){
+	int a = 2;
+	int i = 2;
+	int arr[10];
+	int num = 0;
+
+	while (num<10){
+			while (a < i){
+				if (i%a != 0)//나누어 떨어지지 않으면
+					a++;
+				else{ //나누어 떨어지면
+					i++;
+					a = 2;
+					continue;
+				}
+			}
+			arr[num] = i;
+			num++;
+			i++;
+			a = 2;
+	}
+	for (num = 0; num < 10; num++)
+			printf("%d\n", arr[num]);
+	}
 
