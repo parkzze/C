@@ -1,0 +1,18 @@
+//열혈C 도전프로그래밍1-6번문제
+#include <stdio.h>
+int divide(int sec){
+	int h, m, s;
+	int spare;
+	h = sec / 3600;
+	spare = sec % 3600;
+	m = spare / 60;
+	s = spare % 60;
+	printf("[h=%d, m=%d, s=%d\n]", h, m, s);
+	return 0;
+}
+int main(){
+	int sec;
+	printf("초(second)입력:");
+	scanf("%d", &sec);
+	divide(sec);
+}
