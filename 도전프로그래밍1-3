@@ -1,8 +1,8 @@
-//열혈C 도전프로그래밍1-3번문제
+//열혈C 도전프로그래밍1-3번문
 #include <stdio.h>
 int gcd(int a, int b){
-	int mid;
-	if (a < b){
+	int mid;	
+        if (a < b){
 		mid = b%a; //작은수를 큰수로 나눈 나머지
 		if (mid == 0)
 			return a;
