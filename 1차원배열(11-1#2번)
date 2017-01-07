@@ -1,0 +1,7 @@
+//1차원배열의 활용(260p)
+#include <stdio.h>
+int main(){
+	char arr[] = "Good time";
+		printf("%s\n", arr);
+	return 0;
+}
