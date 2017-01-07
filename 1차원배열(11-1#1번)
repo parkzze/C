@@ -1,0 +1,29 @@
+//1차원배열의 활용(260p)
+#include <stdio.h>
+int main(){
+	int big, small;
+	int sum = 0;
+	int arr[5];
+	printf("5개의 정수입력:");
+	for (int i = 0; i < 5; i++)
+		scanf("%d", &arr[i]);
+	
+	big = arr[0];
+	small = arr[0];
+
+	for (int i = 0; i < 4; i++){ //와 이거 가운데가 i<5가 아니라 i<4다!!
+		if (big < arr[i + 1])
+			big = arr[i + 1];
+	}
+	printf("입력 된 정수 중에서 최댓값= %d\n", big);
+
+	for (int i = 0; i < 4; i++){
+		if (small > arr[i + 1])
+			small = arr[i + 1];
+	}
+	printf("입력 된 정수 중에서 최솟값= %d\n", small);
+
+	for (int i = 0; i < 5; i++)
+		sum += arr[i];
+	printf("입력 된 정수의 총 합= %d\n", sum);
+}
