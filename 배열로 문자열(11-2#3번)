@@ -1,0 +1,18 @@
+//배열기반의 문자열표현(268p)
+#include <stdio.h>
+int main(void){
+	char str[100];
+	int i = 0;
+	char max = str[0];
+	printf("하나의 영단어 입력=>");
+	scanf("%s", str);
+
+	while (str[i] != 0)
+		i++;
+	for (int j = 1; j < i; j++){
+		if (max < str[j])
+			max = str[j];
+	}
+	printf("아스키코드값 최대: %c\n", max);
+	return 0;
+}
