@@ -1,0 +1,12 @@
+//배열기반의 문자열표현(268p)
+#include <stdio.h>
+int main(void){
+	char str[100];
+	int i = 0;
+	printf("하나의 영단어 입력=>");
+	scanf("%s", str);
+	while (str[i] != 0)
+		i++;
+	printf("입력받은 영단어의 길이=%d\n", i);
+	return 0;
+}
