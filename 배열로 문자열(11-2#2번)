@@ -1,0 +1,18 @@
+//배열기반의 문자열표현(268p)
+#include <stdio.h>
+int main(void){
+	char str[100];
+	char opp[100];
+	int i = 0;
+	int j = 0;
+	printf("하나의 영단어 입력=>");
+	scanf("%s", str);
+	while (str[i] != 0)
+		i++;
+	for (j = 0; j < i; j++)
+		opp[j] = str[i-1-j];
+
+	opp[i] = '\0'; //***정말중요 이것땜에 안됐었음
+	printf("역순: %s\n", opp);
+	return 0;
+}
