@@ -1,4 +1,4 @@
-//열혈C 도전프로그래밍1-5번문제
+///열혈C 도전프로그래밍1-5번문제
 #include <stdio.h>
 int main(){
 	int a = 2;
