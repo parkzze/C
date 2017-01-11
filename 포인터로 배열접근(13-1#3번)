@@ -1,0 +1,13 @@
+//포인터를 이용한 배열의 접근(300p)
+#include <stdio.h>
+int main(void){
+	int arr[5] = { 1, 2, 3, 4, 5 };
+	int *ptr = &arr[4];
+	int i,sum=0;
+	for (i = 0; i < 5; i++){
+		sum += *ptr;
+		*ptr--;
+	}
+	printf("%d\n ", sum);
+	return 0;
+}
