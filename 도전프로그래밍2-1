@@ -1,0 +1,44 @@
+//도전프로그래밍2-1
+#include <stdio.h>
+void oddnum(int *odd){
+	int odarr[10];
+	int i = 0,count=0;
+	for (int k = 0; k < 10; k++){
+		if (*odd % 2 != 0){
+			odarr[i] = *odd;
+			i++;
+		}
+		*odd++;
+	}
+		printf("홀수 출력:");
+		for (int a = 0; a < i; a++){ //새로 count정의해서 하다가 82번 돎. 있는걸 활용하자
+			printf("%d ", odarr[a]);
+		}
+		printf("\n");
+}
+void evennum(int *even){
+	int evenarr[10];
+	int i = 0, count = 0;
+	for (int k = 0; k < 10; k++){
+		if (*even % 2 == 0){
+			evenarr[i] = *even;
+			i++;
+		}
+		*even++;
+	}
+	printf("짝수 출력:");
+	for (int a = 0; a < i; a++){
+		printf("%d ", evenarr[a]);
+	}
+	printf("\n");
+}
+int main(void){
+	int arr[10];
+	printf("열개의 정수 입력:");
+	for (int i = 0; i < 10; i++){
+		scanf("%d", &arr[i]);
+	}
+	int *ptr = arr;
+	oddnum(ptr); //call by reference일땐 주솟값을 바로 넘겨라! *붙이지말고
+	evennum(ptr);
+}
