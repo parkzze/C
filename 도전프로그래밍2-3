@@ -1,0 +1,24 @@
+//도전프로그래밍2-3
+#include <stdio.h>
+int main(void){
+	int arr[10];
+	int newarr[10];
+	int a = 0,b=9; //할때마다 원위치 안되게 미리 처음에만 고정
+
+	printf("열개의 정수 입력:");
+	for (int i = 0; i < 10; i++){
+		scanf("%d", &arr[i]);
+		if (arr[i] % 2 != 0){ //홀수면
+			newarr[a] = arr[i];
+			a++;
+		}
+		else{ //짝수면
+			newarr[b] = arr[i];
+			b--;
+		}
+	}
+	for (int i = 0; i < 10; i++){
+		printf("%d ", newarr[i]);
+	}
+	printf("\n");
+}
