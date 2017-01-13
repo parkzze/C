@@ -1,0 +1,25 @@
+//도전프로그래밍2-2
+#include <stdio.h>
+int main(void){
+	int num,i=0;
+	int arr[10];
+	printf("하나의 정수 입력:");
+	scanf("%d", &num);
+
+	while (num/2!=0){
+		int a;
+		a = num % 2; 
+		num = num / 2; 
+		arr[i] = a;
+		i++;
+	}
+	if (num / 2 == 0){ //이 상황을 따져주는게 포인트
+		int a;
+		a = num % 2;
+		arr[i] = a;
+	}
+	for (int a = i; a >= 0; a--){
+		printf("%d", arr[a]);
+	}
+	printf("\n");
+}
