@@ -1,0 +1,26 @@
+//도전프로그래밍2-5
+#include <stdio.h>
+void DesSort(int arr[]){ //배열을 인자로 전달
+	int temp,k=6;
+	while (k != 0){ //전체횟수를 담당하는 k의 선언이 킬링포인트!
+		for (int i = 0; i < k; i++){ 
+			if (arr[i] < arr[i + 1]){
+				temp = arr[i];
+				arr[i] = arr[i + 1];
+				arr[i + 1] = temp;
+			}
+		}
+		k--;
+	}
+	for (int i = 0; i < 7; i++){
+		printf("%d", arr[i]);
+	}
+}
+int main(void){
+	int arr[7];
+	printf("7개의 정수 입력:");
+	for (int i = 0; i < 7; i++){
+		scanf("%d", &arr[i]);
+	}
+	DesSort(arr);
+}
