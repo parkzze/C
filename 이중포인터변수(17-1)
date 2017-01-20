@@ -1,0 +1,34 @@
+//이중 포인터 변수의 활용(368p)
+#include <stdio.h>
+void maxandmin(int **max,int **min){
+	int i = 1;
+	while (i < 4){
+			if (**max < *(*max + i)){
+				*max = (*max + i);
+			}
+			i++;
+		}
+	i = 1;
+	while (i < 4){
+		if (**min > *(*min + i)){
+			*min = (*min + i);
+		}
+		i++;
+	}
+
+	printf("가장큰 값 %d의 주소값: %d\n", **max,*max);
+	printf("가장작은 값 %d의 주소값: %d\n", **min, *min);
+}
+int main(void){
+	int *maxp;
+	int *minp;
+	int arr[5];
+	printf("5개의 정수 입력:");
+	for (int i = 0; i < 5; i++){
+		scanf("%d", &arr[i]);
+	}
+	maxp = arr;
+	minp = arr;
+	maxandmin(&maxp, &minp);
+
+}
