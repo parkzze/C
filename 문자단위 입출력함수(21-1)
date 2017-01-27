@@ -1,0 +1,19 @@
+//getchar함수와 putchar함수의 활용(423p)
+#include <stdio.h>
+int main(void){
+	int ch;
+	printf("하나의 영문자 입력:");
+	ch = getchar();
+	if (ch>=65&&ch <= 90){
+		ch = ch + 32;
+	}
+	else if (ch >= 97 && ch <= 122){
+		ch = ch - 32;
+	}
+	else{
+		printf("영문자를 입력하셔야 합니다\n");
+		return;
+	}
+	putchar(ch);
+	return 0;
+}
