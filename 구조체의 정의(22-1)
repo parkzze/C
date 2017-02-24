@@ -1,0 +1,20 @@
+//구조체의 정의(458p)
+#include <stdio.h>
+struct employee{
+	char name[20];
+	char num[20];
+	int cost;
+};
+int main(void){
+	struct employee first;
+	printf("이름 입력:");
+	scanf("%s", &first.name); //구조체에서 마찬가지로 입력할때 '&' 꼭써야한다!!!
+	printf("주민번호 입력:");
+	scanf("%s", &first.num);
+	printf("급여 입력:");
+	scanf("%d", &first.cost);
+	printf("이름: %s\n", first.name);
+	printf("주민번호: %s\n", first.num);
+	printf("급여: %d\n", first.cost);
+	return 0;
+}
